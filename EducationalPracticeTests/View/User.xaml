@@ -1,0 +1,210 @@
+﻿<UserControl x:Class="EducationalPracticeTests.View.User"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EducationalPracticeTests.View"
+              xmlns:vm="clr-namespace:EducationalPracticeTests.ViewModel"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="615" Background="Transparent">
+    <UserControl.DataContext>
+        <vm:UserVM />
+    </UserControl.DataContext>
+    <Grid>
+        <Border CornerRadius="0 20 20 0" Background="#dbdbf3">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" Grid.Row="0" Width="100" Source="/Images/2.png"/>
+                <Border Grid.Column="1" Grid.Row="0" Background="White" CornerRadius="25" BorderThickness="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="120"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0" Foreground="#3e3eb7" 
+                                   Text="Логин:" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                   FontSize="20"/>
+                        <TextBlock Grid.Row="0" Grid.Column="1" 
+                                   x:Name="userLogin"
+                                   Foreground="#3e3eb7" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                   Margin="10 10" 
+                                   FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="0" Foreground="#3e3eb7" 
+                                   Text="Имя:" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                   FontSize="20"/>
+                        <TextBlock Grid.Row="1" Grid.Column="1" 
+                                   x:Name="userName"
+                                   Foreground="#3e3eb7" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                   Margin="10 10" 
+                                   FontSize="20"/>
+                        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="#3e3eb7" 
+                                   Text="Фамилия:" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                   FontSize="20"/>
+                        <TextBlock Grid.Row="2" Grid.Column="1" 
+                                   x:Name="userSurname"
+                                   Foreground="#3e3eb7" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                   Margin="10 10" 
+                                   FontSize="20"/>
+                    </Grid>
+                </Border>
+
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="55"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0"
+                                   x:Name="userType"
+                                   Foreground="#3e3eb7" FontFamily="Roboto"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                   FontSize="22"/>
+                    <Border Grid.Row="1" 
+                            Background="White" CornerRadius="25" 
+                            BorderThickness="15">
+                        <StackPanel>
+                            <TextBlock Text="Настроить профиль" 
+                                   TextWrapping="Wrap" 
+                                   Foreground="#3e3eb7" 
+                                   FontFamily="Roboto"
+                                   VerticalAlignment="Center" 
+                                   HorizontalAlignment="Left" 
+                                   Margin="12,26,0,74" 
+                                   FontSize="27" RenderTransformOrigin="0.5,0.5" Height="99" Width="138">
+                                <TextBlock.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="0.322"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </TextBlock.RenderTransform>
+                            </TextBlock>
+                            <!--<Image Source="/Images/user2.png" > </Image>-->
+                        </StackPanel>
+
+                    </Border>
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                     
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="35"/>
+                        <RowDefinition Height="*"/>  
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Grid.Row="0" Text="Изменить логин пользователя:" 
+                               Foreground="#3e3eb7" 
+                               FontFamily="Roboto"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left"
+                               Margin="10 10"
+                               FontSize="20"/>
+
+                    <TextBox x:Name="loginUpdateTextBox"    
+                             Grid.Row="1"    
+                             BorderBrush="#8686d7"
+                             BorderThickness="0 0 0 2"
+                             FontFamily="Roboto"
+                             Background="White"
+                             Margin="10 0 10 20"  
+                             SelectionBrush="#e1e1a6"
+                             Foreground="#5353c6" 
+                             SelectionOpacity="0.7"
+                             FontSize="18"/>          
+
+                    <TextBlock Grid.Row="2" Text="Изменить имя пользователя:" 
+                               Foreground="#3e3eb7" 
+                               FontFamily="Roboto"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left"
+                               Margin="10 10"
+                               FontSize="20"/>
+
+                    <TextBox x:Name="nameUpdateTextBox"    
+                             Grid.Row="3"    
+                             BorderBrush="#8686d7"
+                             BorderThickness="0 0 0 2"
+                             FontFamily="Roboto"
+                             Background="White"
+                             Margin="10 0 10 20"  
+                             SelectionBrush="#e1e1a6"
+                             Foreground="#5353c6" 
+                             SelectionOpacity="0.7"
+                            FontSize="18"/>
+
+
+                    <TextBlock Grid.Row="4" Text="Изменить фамилию пользователя:" 
+                               Foreground="#3e3eb7" 
+                               FontFamily="Roboto"
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Left"
+                               Margin="10 10"
+                               FontSize="20"/>
+
+                    <TextBox x:Name="surnameUpdateTextBox"    
+                             Grid.Row="5"    
+                             BorderBrush="#8686d7"
+                             BorderThickness="0 0 0 2"
+                             FontFamily="Roboto"
+                             Background="White"
+                             Margin="10 0 10 20"  
+                             SelectionBrush="#e1e1a6"
+                             Foreground="#5353c6" 
+                             SelectionOpacity="0.7"
+                             FontSize="18"/>
+
+                    <Button Content="Изменить"   Grid.Row="6"                                        
+                            VerticalAlignment="Top" 
+                            Margin="15 5"  
+                            Width="183"
+                            FontFamily="SemiBold" 
+                            FontSize="20"
+                            HorizontalAlignment="Right"
+                            Foreground="White" 
+                            Background="#5294e2" 
+                            BorderThickness="0" 
+                            Height="40"
+                            x:Name="updateButton"
+                            Click="updateButton_Click"/>
+
+                </Grid>
+
+            </Grid>
+        </Border>
+        <Image Source="/Images/user2.png"  HorizontalAlignment="Left" Height="124" Margin="30,387,0,0" VerticalAlignment="Top" Width="144" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.962"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
+
+</UserControl>

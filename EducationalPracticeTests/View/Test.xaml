@@ -1,0 +1,106 @@
+﻿<UserControl x:Class="EducationalPracticeTests.View.Test"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EducationalPracticeTests.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="550" d:DesignWidth="615" Background="Transparent"
+             xmlns:vm="clr-namespace:EducationalPracticeTests.ViewModel">
+    <UserControl.DataContext>
+        <vm:TestVM />
+    </UserControl.DataContext>
+    <Grid>
+        <Border CornerRadius="0 20 20 0" Background="#dbdbf3">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="160"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Border Grid.Column="0" >
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.Row="0" BorderBrush="#FFB7B7E7" 
+                                BorderThickness="3" >
+                            <TextBlock Foreground="#3e3eb7" 
+                               
+                               Text="Перечень предметов" TextWrapping="Wrap"
+                               FontFamily="Roboto"                            
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               FontSize="22"/>
+                        </Border>
+                        <Border Grid.Row="1"
+                                BorderBrush="#FFB7B7E7" 
+                                BorderThickness="3" >
+                            <ListView  x:Name="educationSubjects" 
+                              Foreground="#3e3eb7"
+                              FontFamily="Roboto" 
+                              FontSize="20"
+                              SelectionChanged="educationSubjects_SelectionChanged"
+                              />
+                        </Border>
+                        
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="0"  >
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="150"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>                           
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Border BorderBrush="#FFB7B7E7" 
+                                BorderThickness="3,0,0,3"  
+                                Grid.Row="0"   
+                                Grid.Column="0">
+                            <TextBlock Foreground="#3e3eb7"                                                       
+                               Text="Темы тестов" TextWrapping="Wrap"                                
+                               FontFamily="Roboto"                            
+                               VerticalAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               FontSize="24" />                            
+                        </Border>
+                        <Border BorderBrush="#FFB7B7E7" 
+                                BorderThickness="3"  
+                                Grid.Row="1"   
+                                Grid.Column="1">
+                             <ListView x:Name="test"
+                                       Foreground="#3e3eb7"
+                                       FontFamily="Roboto" 
+                                       FontSize="14" 
+                                       SelectionChanged="test_SelectionChanged"/>
+                        </Border>
+                         <Button Content="Принять" Grid.Column="1"  Grid.Row="2"                                        
+                                VerticalAlignment="Center" 
+                                Margin="15 5"  
+                                Width="183"
+                                FontFamily="SemiBold" 
+                                FontSize="20"
+                                HorizontalAlignment="Right"
+                                Foreground="White" 
+                                Background="#FFB7B7E7" 
+                                BorderThickness="0" 
+                                Height="40"
+                                x:Name="accept"  
+                                Click="accept_Click"
+                                 Visibility="Hidden"
+                                />                        
+                    </Grid>
+                </Border>
+
+                <Grid  Grid.Row="0" Grid.RowSpan="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="testDataGrid" Margin="0,0,0,60"/>
+
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>

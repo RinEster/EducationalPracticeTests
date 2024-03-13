@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="EducationalPracticeTests.UserControls.TestUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:EducationalPracticeTests.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="450" Background="Transparent">
+    <Grid>
+        <Border CornerRadius="0 20 0 0"  Background="#dbdbf3"> 
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="*"/>
+               
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" x:Name="testName"
+                            Foreground="#3e3eb7" 
+                            FontFamily="Roboto"
+                            VerticalAlignment="Center" 
+                            HorizontalAlignment="Left"
+                            Margin="10 10"
+                            FontSize="20"
+                            TextWrapping="Wrap"/>
+                <TextBlock Grid.Row="1" 
+                           x:Name="questionText" Foreground="Black"
+                           FontFamily="Roboto"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Left"
+                           Margin="10 10"
+                           FontSize="18"
+                           TextWrapping="Wrap"/>
+
+                <Border CornerRadius="10" Grid.Row="2" Background="White" BorderThickness="15">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                            <RowDefinition Height="60"/>
+                        </Grid.RowDefinitions>
+                        <RadioButton Margin="10 0 0 0" Grid.Row="0" x:Name="oneRadioButton">
+                            <RadioButton.Content>
+                                <TextBlock TextWrapping="Wrap" Foreground="#3e3eb7"  FontSize="16" x:Name="optionOne"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton  Margin="10 0 0 0" Grid.Row="1"  x:Name="twoRadioButton">
+                            <RadioButton.Content>
+                                <TextBlock TextWrapping="Wrap" Foreground="Black"  FontSize="16"  x:Name="optionTwo"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton Margin="10 0 0 0" Grid.Row="2"  x:Name="threeRadioButton">
+                            <RadioButton.Content>
+                                <TextBlock TextWrapping="Wrap" Foreground="#3e3eb7" FontSize="16"  x:Name="optionThree"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+                        <RadioButton Margin="10 0 0 0" Grid.Row="3"  x:Name="fourRadioButton">
+                            <RadioButton.Content>
+                                <TextBlock TextWrapping="Wrap"  Foreground="Black" FontSize="16"  x:Name="optionFour"/>
+                            </RadioButton.Content>
+                        </RadioButton>
+
+
+                    </Grid>
+                </Border>
+                
+               
+            </Grid>
+        </Border>  
+    </Grid>
+</UserControl>
